@@ -12,6 +12,7 @@
 %\usepackage {enumitem}  
 %\usepackage{graphicx}
 %\usepackage{multicol}
+\usepackage{multirow}
 \usepackage{mathrsfs}
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -30,6 +31,8 @@
 \newtheorem{lemma}{Лемма}[section]
 \newtheorem{axiom}{Аксиома}[section]
 \newtheorem{consequence}{Следствие}[section]
+
+\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 \newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
 \newcommand{\anonsubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
@@ -1432,8 +1435,449 @@ $\alpha$ и $\beta$ -- углы падения и отражения; $D_0$ и $
 
 \anonsection{Раздел 2}
 \anonsubsection{Задача 1. Волны разгрузки в гибких растяжимых нитях}
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:1217}
+  v_{t_1} = v_{t_2}
+  \tag{17}
+\end{equation}
 \anonsubsection{Задача 2. Изучение процесса разгона поршня в стволе пневматической установки}
+$p = p_0 (\rho / \rho_0)^\gamma $
+\[
+	p = p_0 ( V_0/ (V_0 +S X(t)))^\gamma ,
+\]
+
+\[
+	M \frac{d^2 X(t)}{ dt^2} = s \left( p_0 \left(\frac{V_0}{V_0 + S X(t)}\right)^{\displaystyle \gamma} - p_{\text{атм}}\right) 
+\]
+Домножив на $\frac{dX}{dt}$, проинтегрируем его один раз
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:221}
+  \frac{1}{2}\left(\frac{dX}{dt}\right)^2 = S \left( \frac{p_0V_0}{S (\gamma -1)}\left(1 - \frac{V_0}{V_0 + S X}\right)^{ \displaystyle \gamma -1} - p_{\text{атм}}X\right) 
+  \tag{1}
+\end{equation}
+
+\[
+	\frac{p_0V_0}{\gamma -1}\left(1 - \frac{V_0}{V_0 + V_c}\right)^{\displaystyle \gamma -1}
+\]
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:22*}
+  p_{\text{атм}} V_c / \left( \frac{p_0V_0}{ \gamma -1}\left(1 - \frac{V_0}{V_0 + V_c}\right)^{\displaystyle \gamma -1} \right) \approx \frac{1}{50} 
+  \tag{*}
+\end{equation}
+
+$V/V_0 = \phi(p) = (p/p_0)^{-1/ \gamma}$ в области $\RNumb{1}$ и $V/V_1 = \psi(p) = (p/p_{\text{атм}})^{-1/ \gamma} $ для области $\RNumb{2}$.
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:222}
+  \left\{
+    	\begin{array}{lcl}  
+     	 \frac{\displaystyle  \partial V}{\displaystyle  \partial t} &=& - \frac{ \displaystyle  1}{\displaystyle \rho_0} \frac{\displaystyle  \partial p}{\displaystyle  \partial h} \\
+     	 \frac{\displaystyle  \partial \phi}{\displaystyle  \partial t} &=& \frac{\displaystyle  \partial V}{\displaystyle  \partial h}
+    	\end{array}
+  	\right.
+  \tag{2}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:223}
+  \left\{
+    	\begin{array}{lcl}  
+     	 \frac{\displaystyle  \partial V}{\displaystyle  \partial t} &=& - \frac{ \displaystyle  1}{\displaystyle \rho_1} \frac{\displaystyle  \partial p}{\displaystyle  \partial h} \\
+     	 \frac{\displaystyle  \partial \psi}{\displaystyle  \partial t} &=& \frac{\displaystyle  \partial V}{\displaystyle  \partial h}
+    	\end{array}
+  	\right.
+  \tag{3}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:224}
+	\begin{array}{llll}
+  		t = 0, & x(h,0) = & \partial x (h, 0)/ \partial t = & 0, \\
+  		p(h,0) =  p_0 & (h < 0) ; & p(h,0) =  p_{\text{атм}} &(h > 0).
+  	\end{array}
+  \tag{4}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:225}
+  M \frac{\partial ^2 x (0,t)}{\partial t^2} = [p(-0,t) - p(+0,t)] S .
+  \tag{5}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:226}
+  M \frac{\partial ^2 x (0,t)}{\partial t^2} = S p(-0,t)   .
+  \tag{6}
+\end{equation}
+\[
+	s = v + \int^p_{p_0} \sqrt{ - \phi '(\eta) / \rho_0} d\eta = const, \quad v = \frac{\partial x}{\partial t} . 
+\]
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:227}
+    v + \int^p_{p_0} \sqrt{ - \phi '(\eta) / \rho_0} d\eta = 0 \quad \text{при} \quad h < 0 .
+  \tag{7}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:228}
+	p(-0,t) = p_0 \left[ \frac{1-\gamma}{2 a_1} v(0,t) +1 \right]^{\frac{\displaystyle 2 \gamma}{\displaystyle \gamma - 1}}
+  \tag{8}
+\end{equation}
+
+ Из \eqref{eq:226} и \eqref{eq:228}
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:229}
+	M \frac{d ^2 X(t)}{d t^2} = S p_0 \left[\frac{1-\gamma}{2 a_1} \frac{d X(t)}{dt} +1 \right]^{\frac{\displaystyle 2 \gamma}{\displaystyle \gamma - 1}} ,
+  \tag{9}
+\end{equation}
+где $X(t) = x(0,t);$ $ v(t,0) = dX(t)/dt;$ $a_1 = \sqrt{\gamma p_0/ \rho_0}$.\\
+Начальные условия для уравнения \eqref{eq:229} имеют вид :
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:2210}
+	t = 0, \quad X = dX / dt = 0 .
+  \tag{10}
+\end{equation}
+Уравнения \eqref{eq:229} с начальными условиями \eqref{eq:2210} легко интегрируются:
+\[
+	\frac{dX}{dt} = \frac{2 a_1}{\gamma - 1} \left[ 1 - \left( \frac{Sp_0}{M} \frac{\gamma + 1}{2 a_1} t +1 \right) ^{-\frac{\displaystyle \gamma - 1}{\displaystyle \gamma +1 }} \right], 
+\]
+
+\[ 
+	X = \frac{2a_1}{\gamma - 1}\left[t - \frac{Ma_1}{S p_0}\left( \frac{Sp_0}{M} \frac{\gamma +1}{2 a_1}t +1 \right)^{\displaystyle \frac{2}{ \displaystyle \gamma +1}} + \frac{Ma_1}{Sp_0} \right].
+\]
+
+\begin{center}
+		\begin{tabular}{c c c}
+			$ \displaystyle \frac{dh}{dt} = \displaystyle \frac{1}{\sqrt{-\rho_1 \psi ' (p)}} $ & $\text{или}$ & 
+			$ \left\{
+    			\begin{array}{lcl}  
+     	 			h &=& \displaystyle \frac{(t-\tau)}{\sqrt{-\rho_1 \psi '(p(\tau))}} , \\
+     	 			p &=& p(\tau)
+    			\end{array}
+  			\right.$ \\ 
+			
+			
+		\end{tabular} 
+\end{center}
+
+\[
+	h\sqrt{- \rho_1 \psi' (p(\tau)) } = t- \tau;
+\]
+\[
+	h\sqrt{- \rho_1 \psi' (p(\tau + d\tau)) } = t- (\tau + d\tau) .
+\]
+\[
+	h^* = - \frac{1}{\left(\sqrt{- \rho_1 \psi' (p(\tau))} \right) _{\tau}' }
+\]
+\[
+	r \equiv v - \int^{p}_{p_{\text{атм}}} \sqrt{- \psi'(\eta)/\rho_1} d\eta,
+\]
+или
+\[
+	v - \int^{p}_{p_{\text{атм}}} \sqrt{- \psi'(\eta)/\rho_1} d\eta = 0 \quad \text{при} \quad h > 0.
+\]
+
+\[
+	p = p_{\text{атм}} \left( \frac{\gamma - 1}{2 a_2}v + 1 \right)^{\displaystyle \frac{2\gamma}{\gamma - 1}} .
+\]
+\[
+	h^* = \frac{2}{\gamma + 1} \frac{a_2^2}{d^2x/dt^2} \left( \frac{\gamma - 1}{2 a_2} \frac{dx}{dt} +1  \right)^{\displaystyle \frac{2\gamma}{\gamma - 1}},
+\]
+
+\[
+	h^* = \frac{2}{\gamma + 1} \frac{a_2^2 M}{\ddot{x}(0)}
+\]
+\[
+	\ddot{x}(0) = S (p_0 - p_{\text{атм}})
+\]
+Тогда
+\[
+	h^* = \frac{2}{\gamma + 1} \frac{a_2^2 M} {S (p_0 - p_{\text{атм}}) }
+\]
+
+
+\[
+	H_z(z,y) = \frac{m}{(z-x-l)^2 + y^2} \frac{z-x-l}{\sqrt{(z-x-l)^2 + y^2}} - \frac{m}{(z-x)^2 + y^2} \frac{z-x}{\sqrt{(z-x)^2 + y^2}} .
+\]
+Найдем магнитный поток через рассматриваемый виток:
+\begin{equation}
+	\begin{array}{l}
+		\Phi(z,t) = \displaystyle \int H_z(z,y) ds = 2 \pi m \displaystyle \int\limits_0^R \left\{ \displaystyle \frac{z-x-l}{\left[ (z - x - l)^2 +y^2 \right]^{3/2}} - \frac{z - x}{\left[ (z - x)^2 + y^2 \right]^{3/2}} \right\} \cdot \\
+		\cdot y dy = 2 \pi m \left[ \displaystyle \frac{z-x}{\sqrt{(z-x)^2 + R^2}} - \frac{z - x - l}{\sqrt{(z - x - l)^2 + R^2}} + sign(z - x - l) - \right. \\ 
+		- sign(z - x) \Bigg] .
+	\end{array}
+	\notag
+\end{equation} 
+
+
+\begin{equation}
+	\begin{array}{l}
+	E(z,t) = \displaystyle \frac{\partial \Phi}{\partial t} = - 2 \pi m \displaystyle \frac{dx}{dt} \left[ \frac{1}{\sqrt{(z-x)^2 + R^2}} \frac{1}{\sqrt{(z- x - l)^2 + R^2}} + \right. \\ \left. \displaystyle + \frac{(z - x - l)^2}{\left[ (z - x - l)^2 + R^2 \right]^{3/2}} - \frac{(z - x)^2}{\left[ (z - x)^2 + R^2 \right]^{3/2}} \right] .
+	\end{array}
+	\notag
+\end{equation}
+
+\begin{equation}
+	\begin{array}{l}
+	E_n(t) = \displaystyle \int\limits_0^h n(z) E(z,t) dz =  2 \pi m N R^2 \frac{dx}{dt} \left\{ \frac{1}{\sqrt{x^2 + R^2}} + \frac{1}{\sqrt{(x + l)^2 + R^2}} - \right. \\ 
+	\left. \displaystyle -\frac{1}{\sqrt{(h - x)^2 + R^2}} - \frac{1}{\sqrt{(h - x - l)^2 + R^2}}  + \frac{x}{R^2}\left[ \frac{(h - x)}{\sqrt{ (h-x)^2 + R^2 }} - \right. \right. \\ 
+	\left. \left. \displaystyle -  \frac{(h - x - l)}{\sqrt{ (h - x - l)^2 + R^2 }} + \frac{x}{\sqrt{x^2 + R^2}} - \frac{x + l}{\sqrt{(x + l)^2 + R^2}} \right] \right\} .
+	\end{array}
+	\notag
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:2211}
+	E_n(t) = 4 \pi m l N \frac{dx}{dt} .
+  \tag{11}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:2212}
+	\dot{x}(t) = \frac{dx (t)}{dt} = ky(t),
+  \tag{12}
+\end{equation}
+
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:2213}
+	k = \frac{x_2 - x_1}{ \int\limits^{t_2}_{t_1} y(t)dt} ,
+  \tag{13}
+\end{equation}
+где $\int\limits^{t_2}_{t_1} y(t)dt$ вычисляется численным интегрированием по осциллограмме, а $x_2 - x_1$ замеряется на установке.\\
+Из формул \eqref{eq:2212}, \eqref{eq:2213} для скорости поршня получим формулу 
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:2214}
+	\dot{x}(t) = \frac{x_2 - x_1}{ \int\limits^{t_2}_{t_1} y(t)dt} y(t) \equiv k y(t) 
+  \tag{14}
+\end{equation}
+Интегрируя \eqref{eq:2214} от $t_1$ до $t$, получим
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:2215}
+	x(t) = x_1 + \frac{x_2 - x_1}{ \int\limits^{t_2}_{t_1} y(t)dt}  \int\limits^{t}_{t_1} y(t)dt = x_1 + k  \int\limits^{t}_{t_1} y(t)dt.
+  \tag{15}
+\end{equation}
+Формулы \eqref{eq:2214} и \eqref{eq:2215} позволяют определить скорость поршня как функцию его координаты $\dot{x} = f(t) $.
+
+ 
+
+
+
+
 \anonsubsection{Задача 3. Нелинейные волны сжатия (растяжения) сдвига в тонкостенной цилиндрической трубе}
+\addtocounter{equation}{1}
+\begin{equation}\label{eq:231}
+	\begin{array}{l}
+		x_1 \geqslant 0, \quad  \overrightarrow{V} = 0, \quad \sigma_{11} = \sigma_{11}^0 = const, \quad \sigma_{12} = \sigma_{12}^0 = const, \\ \sigma_{22} = \sigma_{13} = \sigma_{23} = \sigma_{33} = 0.
+	
+	\end{array}
+  \tag{1}
+\end{equation}
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:232}
+		 \sigma_{13} = \sigma_{23} = \sigma_{33} = 0, \quad \forall x_1, x_2, t
+  	\tag{2}
+	\end{equation}
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:233}
+		\overrightarrow{V} = \overrightarrow{V}(x,t), \quad \varepsilon_{ij} = \varepsilon_{ij}(x,t), \quad \sigma_{ij} = \sigma_{ij}(x,t),	 
+  	\tag{3}
+	\end{equation}
+где для краткости обозначено 
+\[ x = x_1 \]
+Для упрощения решения пренебрежем радиальной инерцией, тогда $\sigma_{22} = 0$ для любых $x, t$.\\
+В этих предположениях уравнения движения имееют вид 
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:234}
+		\rho\frac{\partial v_1}{\partial t} = \frac{\partial \sigma_{11}}{\partial x} , \quad \rho\frac{\partial v_2}{\partial t} = \frac{\partial \sigma_{12}}{\partial x}, \quad	\rho\frac{\partial v_2}{\partial t} = 0, 
+  	\tag{4}
+	\end{equation}
+	где $\rho$ - плотность недеформированного материала трубы.
+\[
+	\varepsilon_{ij} = \frac{1}{2}\left( \frac{\partial w_i}{\partial x_j} + \frac{\partial w_j}{\partial x_i} \right)
+\]
+откуда следует, что 
+\[
+	\varepsilon_{11} = \frac{\partial w_1}{\partial x}, \quad \gamma_{12} = 2 \varepsilon_{12} = \frac{\partial w_2}{\partial x},
+\]
+где $\gamma_{12}$ - полный сдвиг.\\
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:235}
+		\frac{\partial \varepsilon_{11}}{\partial t} = \frac{\partial v{1}}{\partial x} , \quad \frac{\partial \gamma_{12}}{\partial t} = \frac{\partial v_{2}}{\partial x}. 
+  	\tag{5}
+	\end{equation}
+
+\[
+	dW = \sigma_{\text{ср}}d\varepsilon_{\text{ср}} + \sigma_{u}d\varepsilon_u
+\]
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:236}
+		\begin{array}{lll}
+			\sigma_{\text{ср}} &=& \displaystyle \frac{1}{3} \sigma_{ii},\\
+			\sigma_u &=& \left(\displaystyle \frac{3}{2} (\sigma_{ij} - \sigma_{\text{ср}}\delta_{ij})(\sigma_{ij} - \sigma_{\text{ср}}\delta_{ij}) \right)^{\displaystyle \frac{1}{2}},\\
+			\varepsilon_{} &=& \displaystyle \frac{1}{3} \varepsilon_{ii},\\
+			\varepsilon_u &=& \left(\displaystyle  \frac{2}{3} (\varepsilon_{ij} - \varepsilon_{\text{ср}}\delta_{ij})(\varepsilon_{ij} - \varepsilon_{\text{ср}}\delta_{ij}) \right)^{\displaystyle \frac{1}{2}}.
+		\end{array}
+  	\tag{6}
+	\end{equation}
+
+\[ \sigma_{ij} = \frac{\partial W}{\partial \varepsilon_{ij}}, \]
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:237}
+		\begin{array}{l}
+			\sigma_{ij} - \sigma_{\text{ср}}\delta_{ij} =\displaystyle  \frac{2}{3} \frac{\Phi(\varepsilon_u)}{\varepsilon_u} (\varepsilon_{ij} - \varepsilon_{\text{ср}}\delta_{ij}), \\
+			\sigma_{\text{ср}} = f(\varepsilon_{\text{ср}}).
+		\end{array}
+  	\tag{7}
+	\end{equation}
+\[ \varepsilon_{\text{ср}} = 0 \]
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:238}
+	 \varepsilon_{13} = \varepsilon_{23} = 0, \quad \varepsilon_{22} = \varepsilon_{33} = - \frac{1}{2}\varepsilon_{11}. 
+	\tag{8}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:239}
+		\begin{array}{l}
+			\displaystyle \frac{\partial \varepsilon}{\partial t} = \displaystyle \frac{\partial u}{\partial x}, \quad \displaystyle \frac{\partial \gamma}{\partial t} = \displaystyle \frac{\partial v}{\partial x}, \\
+			\displaystyle \frac{\partial u}{\partial t} = \displaystyle \frac{1}{\rho} \frac{\partial (\varepsilon \phi(s))}{\partial x}, \quad \displaystyle \frac{\partial v}{\partial t} = \displaystyle \frac{1}{3 \rho} \frac{\partial (\gamma \phi(s))}{\partial x},
+		\end{array}
+  	\tag{9}
+	\end{equation}
+где для краткости обозначено 
+\[ 
+	\begin{array}{l}
+		u = v_1, \quad v = v_2, \quad \varepsilon = \varepsilon_{11}, \quad \gamma = \gamma_{12}, \\
+		s = \varepsilon_u = (\varepsilon^2 + \gamma^{2/3})^{1/2}, \quad \phi(s) = \Phi(s)/s.
+	\end{array}
+\]
+
+\[
+	\overrightarrow{u} = \left[
+		\begin{array}{l}
+		\varepsilon\\ \gamma \\ u \\ v
+		\end{array}
+	    \right]
+\]
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2310}
+		\begin{array}{l}
+			\displaystyle \frac{\partial \overrightarrow{u}}{\partial t} = A(\overrightarrow{u})\displaystyle \frac{\partial \overrightarrow{u}}{\partial x},  \\
+			A(\overrightarrow{u}) = \left[
+			\begin{array}{cc}
+				\overrightarrow{0} & I \\ A_1 & \overrightarrow{0}
+			\end{array}
+			\right],
+		\end{array}
+  	\tag{10}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2311}
+		\begin{array}{l}
+			a_{11}(\varepsilon, \gamma) = \displaystyle \frac{1}{\rho}\left[ \phi(s) + \varepsilon^2 \displaystyle \frac{\phi'(s)}{s} \right] , \\
+			a_{12}(\varepsilon, \gamma) = a_{21}(\varepsilon, \gamma) = \displaystyle \frac{1}{3 \rho} \varepsilon \gamma \displaystyle \frac{\phi'(s)}{s} ,\\
+			a_{22}(\varepsilon, \gamma) = \displaystyle \frac{1}{3 \rho}\left[ \phi(s) + \displaystyle \frac{1}{3}\gamma^2 \displaystyle \frac{\phi'(s)}{s} \right].
+		\end{array}
+  	\tag{11}
+	\end{equation}
+
+\[ |A + \xi E| = |\xi I - A_1| = 0.\]
+Раскрывая его, получим 
+\[ \xi^4 -\xi^2(a_{11} + a_{22}) + a_{11}a_{22} - a_{12}^2 = 0 \]
+Отсюда определяем
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2312}
+		\begin{array}{l}
+			\xi^2_{\text{Б}}(\varepsilon, \gamma) = \frac{1}{2} ( a_{11} + a_{22} + \sqrt{(a_{11} + a_{22})^2 + 4 a_{12}^2 } ), \\
+			\xi^2_{\text{М}}(\varepsilon, \gamma) = \frac{1}{2} ( a_{11} + a_{22} - \sqrt{(a_{11} + a_{22})^2 + 4 a_{12}^2 } ).
+		\end{array}
+  	\tag{12}
+	\end{equation}
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2313}
+	 \Phi(0) = 0,\quad \Phi(s) > 0,\quad s > 0 .
+	\tag{13}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2313'}
+	 \Phi'(s) > 0,\quad \forall s
+	\tag{13'}
+	\end{equation} 
+
+\[
+	\begin{array}{l}
+	\displaystyle \frac{d\overrightarrow{u} }{dy} = \displaystyle \frac{\overrightarrow{r}}{\overrightarrow{r} grad \xi(\overrightarrow{u})},\\
+	grad \xi(\overrightarrow{u}) = \left( \displaystyle \frac{\partial \xi}{\partial \varepsilon} , \frac{\partial \xi}{\partial \gamma} , \frac{\partial \xi}{\partial u} , \frac{\partial \xi}{\partial v} \right)
+	\end{array}
+\]
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2314}
+	 \frac{d\gamma}{d\varepsilon} = \frac{\xi^2 - a}{c}, \quad \frac{d u}{d \varepsilon} = - \xi, \quad \frac{d v}{d \gamma} = - \xi
+	\tag{14}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2315}
+	 \Phi''(s) \leqslant  0 , \quad s > 0.
+	\tag{15}
+	\end{equation} 
+\[
+	\begin{array}{lr}
+		sgn \displaystyle \frac{d \gamma}{d \varepsilon} = - sgn \varepsilon \gamma & \text{в быстрой волне}, \\
+		sgn \displaystyle \frac{d \gamma}{d \varepsilon} = sgn \varepsilon \gamma & \text{в медленной волне}.
+	\end{array}
+\]
+\[ \varepsilon = \varepsilon_1, \quad \gamma = \gamma_1, \quad x = 0, \quad t > 0, \]
+
+\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			 \hline
+			 & $\text{Материал}$ & $\text{длина, }$ & $\text{внешний}$ & $\text{толщина}$ & $E,$ & $\rho,$ & $a = $\\
+
+			 &  & $\text{ мм}$ & $\text{диаметр,}$ & $\text{стенки}$ & $\text{МПа}$ & $\text{кг/м}^3$ & $ = \sqrt{\frac{E}{\rho}}$\\
+
+			 & &  & $\text{мм}$ & $\text{мм}$ &  &  & $\text{м/с}$\\
+			 \hline
+			 $\text{образец}$&&&&&&&\\ \hline
+			$\text{стержень}$&&&&&&&\\ \hline
+			
+		\end{tabular} 
+	\end{center}
+
+\[ \Delta \varepsilon = \frac{\Delta U}{ K_{\text{П}}}\]
+
+\begin{center}
+		\begin{tabular}{|c|c|c|}
+			 \hline
+			 $\text{Сечения}$ & $\text{Каналы осциллографов}$ & $\text{К}_\text{П}$ \\ \hline
+
+			 \multirow{2}{*}{1} & $\Delta \varepsilon$ &\\
+			\cline{2-3}
+             & $\Delta \gamma$ & \\ \hline
+
+             \multirow{2}{*}{2} & $\Delta \varepsilon$ &\\
+			\cline{2-3}
+             & $\Delta \gamma$ & \\ \hline
+
+             \multirow{2}{*}{3} & $\Delta \varepsilon$ &\\
+			\cline{2-3}
+             & $\Delta \gamma$ & \\ \hline
+			
+		\end{tabular} 
+	\end{center}
+
+
 \anonsubsection{Задача 4. Прямой экспериментальный метод построения ударных диаграмм сжатия грунтов}
 \anonsubsection{Задача 5. Сверхзвуковое обтекание кругового конуса}
 \anonsubsection{Задача 6. Соударение двух упругих тел}
