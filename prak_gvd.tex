@@ -2169,10 +2169,263 @@ I, а несколько меньшее, так как полна разреже
 
 С помощью ударного копра в образце грунта инициируется ударная волна. Измерительная техника фиксирует время прохождения этой волны по образцу, что дает возможность вычислить скорость ударной волны. Решение соответствующей теоретической задачи позволит определить значения плотности и давления за ударном полной и по ним построить диаграмму ударного сжатия образца грунта.
 
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:241}
+	 \frac{\partial^2 u}{\partial t^2} = \frac{1}{\rho_0} \frac{\partial \sigma}{\partial x},
+	\tag{1}
+	\end{equation} 
+$\sigma = f(\varepsilon)$      $\varepsilon = \partial u / \partial x$
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:242}
+	 \frac{\partial^2 u}{\partial t^2} = a^2(\varepsilon) \frac{\partial^2 u}{\partial x^2}, \quad \text{где} \quad a(\varepsilon) = \sqrt{\frac{1}{\rho_0} \frac{ d \sigma}{ d \varepsilon}}
+	\tag{2}
+	\end{equation}
+
+$ v = \partial u/ \partial t$
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:243}
+	 \left\{
+	 	\begin{array}{l}
+	 		\displaystyle \frac{\partial v}{\partial t} = a^2 \displaystyle \frac{\partial \varepsilon}{\partial x}, \\
+	 		\displaystyle \frac{\partial v}{\partial x} = \displaystyle \frac{\partial \varepsilon}{\partial t},
+	 	\end{array}
+	 \right.
+	\tag{3}
+	\end{equation} 
+	\[
+	 \frac{\partial v}{\partial t} \pm a \frac{\partial v}{\partial x}  = \pm a \left( \frac{\partial \varepsilon}{\partial t} \pm \frac{\partial \varepsilon}{\partial x}  \right)
+	\]
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:244}
+	\left\{ 
+	\begin{array}{lcl}
+	 dv = a(\varepsilon) d \varepsilon & \text{вдоль линии} & dx = a(\varepsilon) dt \\
+	 dv = - a(\varepsilon) d \varepsilon & \text{вдоль линии} & dx = - a(\varepsilon) dt
+	 \end{array}
+	 \right.
+	\tag{4}
+	\end{equation} 
+$ dx = \pm a(\varepsilon) dt $
+$ \sigma = E \varepsilon$
+$c = \sqrt{E/ \rho_c}$
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:245}
+	 \left\{
+	 	\begin{array}{l}
+	 		x = \pm ct + const,\\
+	 		v = \pm c \varepsilon + const.
+	 	\end{array}
+	 \right.
+	\tag{5}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:246}
+	 v = \pm c \varepsilon + v_0.
+	\tag{6}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:247}
+	 v = \pm c \varepsilon .
+	\tag{7}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:248}
+	 v = \frac{v_0}{2}, \quad \varepsilon = - \frac{v_0}{2 c}
+	\tag{8}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:249}
+	 \left\{
+	 	\begin{array}{l}
+	 		\rho_a D = \rho^* (D - v^*), \\
+	 		\rho_a D v^* = p^* - p_a.
+	 	\end{array}
+	 \right.
+	\tag{9}
+	\end{equation}
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2410}
+	 v_1 = v^*, \quad \sigma_1 = - (p^* - p_a).
+	\tag{10}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2411}
+	 v_1 = c \varepsilon_1 + v_0.
+	\tag{11}
+	\end{equation} 
+
+\[ 
+\left\{
+	\begin{array}{l}
+		\rho_a D = \rho^* (D - v^*), \\
+	 	\rho_a D v^* = p^* - p_a, \\
+	 	-E \varepsilon_1 = p^* - p_a,\\
+	 	v_1 - v_0 = c \varepsilon_1,\\
+	 	v_1 = v^*,	
+	\end{array}
+\right.	
+\]
+
+
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:2412}
+	 	\begin{array}{l}
+	 		p^* - p_a = \displaystyle \frac{\rho_c c v_0}{1 + \displaystyle \frac{\rho_c}{\rho_a} \frac{c}{D}},\\
+	 		1 - \displaystyle  \frac{\rho_a}{\rho^*} = \displaystyle \frac{ \displaystyle \frac{\rho_c}{\rho_a} \frac{c v_0}{D^2}}{1+ \displaystyle \frac{\rho_c}{\rho_a} \frac{c}{D}}.
+	 	\end{array}
+	\tag{12}
+	\end{equation}
+
+$( 1 - \rho_a/\rho^*)$ 
+$D = \Delta x/ \Delta t$
+$v_0 = \sqrt{2 g h}$
+
+\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			 \hline
+			  № & $\Delta t$ & $h$ & $v_0$ & $v^*$ & $D$ & $\varepsilon^*$ & $p^*$\\ \hline
+			  1 &&&&&&&\\ \hline
+			  2 &&&&&&&\\ 
+			 \hline
+			
+		\end{tabular} 
+	\end{center}
 
 \newpage
 \anonsubsection{Задача 5. Сверхзвуковое обтекание кругового конуса}
+$u = V_x(\theta), \quad v = V_y(\theta)$
+$\partial v/ \partial x - \partial u / \partial y = 0$
+
+\addtocounter{equation}{1}
+	\begin{equation}\label{eq:251}
+	 \frac{d v}{d u} tg \theta + 1 = 0. 
+	\tag{1}
+	\end{equation} 
+
+\addtocounter{equation}{1}
+  \begin{equation}\label{eq:252}
+   v \frac{d^2 v}{d u^2} = 1 + \left( \frac{d v}{d u} \right)^2 - \frac{1}{a^2} \left(u + v \frac{dv}{du} \right)^2 . 
+  \tag{2}
+  \end{equation} 
+  $u^2 + v^2$
+  \[
+    \frac{u^2 + v^2}{2} + \frac{a^2}{\gamma - 1} = h_0,
+  \]
+
+  \addtocounter{equation}{1}
+  \begin{equation}\label{eq:253}
+   \text{при} \theta = \theta_0 \frac{u}{v} = tg \theta_0, 
+  \tag{3}
+  \end{equation} 
+
+  \addtocounter{equation}{1}
+  \begin{equation}\label{eq:254}
+   \begin{array}{l}
+   u + v tg \beta = V_{\infty}, \\
+   v^2 = f(u),
+   \end{array}
+  \tag{4}
+  \end{equation} 
+где 
+\[v^2 = (V_{\infty} - u)^2 \frac{u - V^2_{\text{кр}}/V_{\infty}}{V^2_{\text{кр}}/V_{\infty} + \frac{2}{k +1}V_{\infty} - u }  \quad - \text{уравнение ударной поляры}\]
+
+$\beta = \beta(M_{\infty})$
+
+\addtocounter{equation}{1}
+  \begin{equation}\label{eq:255}
+   u |_{\theta = \beta} = u_1(\beta), \quad v |_{\theta = \beta} = v_1(\beta), 
+  \tag{5}
+  \end{equation} 
+
+\addtocounter{equation}{1}
+  \begin{equation}\label{eq:256}
+   \frac{dv}{du}|_{\theta = \beta} = - ctg \beta. 
+  \tag{6}
+  \end{equation} 
+
+\addtocounter{equation}{1}
+  \begin{equation}\label{eq:257}
+   \begin{array}{l}
+   \frac{d^2 v ^*}{ du^2} = F \left( u, v, \frac{dv}{du} \right),\\
+   v(u_1) = v_1,\\
+   \frac{dv}{du} |_{u = u_1} = ctg \beta.
+   \end{array}
+  \tag{7}
+  \end{equation} 
+
+\addtocounter{equation}{1}
+  \begin{equation}\label{eq:258}
+   u = - v \frac{d v}{du}. 
+  \tag{8}
+  \end{equation}
+
+\[
+  \theta = - arctg \left[ \frac{dv}{du} \right]^{-1}, \quad u_0 < u < u_1,
+\]
+
+\[
+  \theta_0 = - arctg \left[ \frac{dv}{du} \right]^{-1}_0 = arctg \frac{v_0}{u_0}
+\]
+
+\[
+  \frac{u_0^2 + v_0^2}{2} + \frac{\gamma}{\gamma + 1} \frac{p_0}{\rho_0} = \frac{u_1^2 + v_1^2}{2} + \frac{\gamma}{\gamma + 1}\frac{p_1}{\rho_1},
+\]
+
+\[
+  \frac{p_0}{\rho_0^{\gamma}} = \frac{p_1}{\rho_1^{\gamma}}.
+\]
+
+\[
+  C_x = \frac{\iint\limits_{\sum_k}(p_0 - p_{\infty})sin \theta_0 d \sigma}{\displaystyle \frac{1}{2} \rho_{\infty} V^2_{\infty} S_m} = \frac{p_0 - p_{\infty}}{\displaystyle \frac{\gamma}{2} p_{\infty} M^2_{\infty}}
+\]
+
+\[ p_0 = p_{\text{атм}} + p_{\text{0 изб}} = p_{\text{атм}} + (n - n_0)_0k_{p_0},\]
+\[ p_{\text{ст}} = p_{\text{атм}} + p_{\text{ст изб}} = p_{\text{атм}} + (n - n_0)_{\text{ст}}k_{p_{\text{ст}}},\]
+где $p_{\text{атм}} = p_{\delta} + \Delta p, $
+
+\[ 
+  \frac{p_0}{p_{\text{ст}}} = \left( 1 + \frac{k-1}{2}M^2 \right)^{\displaystyle \frac{k}{k-1}},
+\]
+
+\[
+  \frac{F}{F_{\text{кр}}} = \frac{\left( \displaystyle 1 + \frac{k-1}{2} M^2 \right)^{\displaystyle \frac{k+1}{2(k-1)}}}{M\left(\displaystyle  \frac{k+1}{2}\right)^{\displaystyle \frac{k+1}{2(k-1)}} },
+\]
+\[
+  q = \frac{\rho V^2}{2} = \frac{v^2}{2} \frac{\rho}{p} p_{\text{ст}} = \frac{k}{2} p_{\text{ст}}M^2
+\]
+
+\[
+  \begin{array}{l}
+    C_x = \displaystyle \frac{X}{q S} =\displaystyle  \frac{(n - n_0)_x K_x}{q S}, \\
+    C_y = \displaystyle \frac{Y}{q S} = \displaystyle  \frac{(n - n_0)_y K_y}{q S},\\
+    m_z = \displaystyle \frac{M_z}{q S b} = \displaystyle  \frac{(n - n_0)_{mz} K_{mz}}{q S b}, \\
+    m_x = \displaystyle \frac{M_x}{q S d} = \displaystyle \frac{(n - n_0)_{mx} K_{mx}}{q S d},
+  \end{array} 
+\]
+
+\[
+  \begin{array}{l}
+    C_{x_1} = C_x cos \alpha - C_y sin \alpha,\\
+    C_{y_1} = C_x sin \alpha + C_y cos \alpha, \\
+    m_{z_1} = m_z, \quad m_{x_1} = m_x. 
+  \end{array} 
+\]
+
+\[ m_{zA} = m_{z0b} - \frac{b_0}{b} C_{y_1}, \]
+
+\[ C_{g} = x_{g} / b = m_{zA}/C_{y_1}  \]
 \anonsubsection{Задача 6. Соударение двух упругих тел}
+
 \anonsubsection{Задача 7. Экспериментальное исследование подводного взрыва сферического заряда}
 \anonsubsection{Задача 8. Влияние вращения цилиндра, находящегося в поперечном потоке, на распределение давления по его поверхности}
 
